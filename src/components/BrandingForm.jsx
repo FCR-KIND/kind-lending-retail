@@ -101,7 +101,7 @@ const BrandingForm = () => {
 
   const handleDownload = async (imageUrl) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/download-image?url=${encodeURIComponent(imageUrl)}`);
+      const response = await fetch(`https://kind-lending-retail.onrender.com/api/download-image?url=${encodeURIComponent(imageUrl)}`);
       if (!response.ok) throw new Error('Download failed');
       
       const blob = await response.blob();
@@ -134,7 +134,7 @@ const BrandingForm = () => {
     setError('');
 
     try {
-      const response = await fetch('http://localhost:3000/api/generate-brand', {
+      const response = await fetch('https://kind-lending-retail.onrender.com/api/generate-brand', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

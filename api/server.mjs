@@ -10,10 +10,9 @@ console.log('Ideogram API Key:', process.env.IDEOGRAM_API_KEY ? 'Found' : 'Not f
 const app = express();
 
 app.use(cors({
-   origin: 'http://localhost:5173',
-   credentials: true
-}));
-app.use(express.json());
+    origin: ['http://localhost:5173', 'https://kind-lending-retail.vercel.app'],
+    credentials: true
+ }));
 
 // Rate limiter configuration
 const limiter = rateLimit({
