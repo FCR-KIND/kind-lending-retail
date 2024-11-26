@@ -13,6 +13,7 @@ app.use(cors({
     origin: ['http://localhost:5173', 'https://kind-lending-retail.vercel.app'],
     credentials: true
  }));
+ app.use(express.json());
 
 // Rate limiter configuration
 const limiter = rateLimit({
